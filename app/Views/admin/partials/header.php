@@ -21,7 +21,7 @@
         <div class="sidebar">
             <div class="sidebar-header">
                 <div class="app-icon">
-                    <img src="http://localhost/poly_tro/public/image/travele-logo1.png" style="width:100%; height:90px" alt="">
+                    <img src="http://localhost/poly_tro/public/image/logo.png" style="width:100%; height:90px" alt="">
                 </div>
             </div>
             <ul class="sidebar-list">

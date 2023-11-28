@@ -2,9 +2,9 @@
     <footer class="footer">
         <div class="footer-description">
             <p class="footer-title">Tại sao lại chọn
-                Travale.com</p>
+                Poly Trọ</p>
             <p style="margin: 16px 0">Chúng tôi biết bạn có
-                rất nhiều lựa chọn, nhưng Travale.com tự hào
+                rất nhiều lựa chọn, nhưng Poly Trọ tự hào
                 là trang web tìm phòng uy tín. Vì vậy tin của bạn đăng trên website
                 sẽ tiếp cận được với nhiều người hơn, do
                 đó giao dịch nhanh hơn, tiết kiệm chi phí
@@ -53,12 +53,12 @@
             <div class="footer-information_inner">
                 <div class="logo">
                     
-                    <p>Travale.com tự hào là nơi cung cấp
+                    <p>Poly Trọ tự hào là nơi cung cấp
                         dịch vụ thuê trọ tốt nhất cho
                         các bạn sinh viên</p>
                 </div>
                 <div class="about-us">
-                    <p class="footer-title">Về Travale.COM
+                    <p class="footer-title">Về Poly Trọ
                     </p>
                     <div class="footer-content">
                         <a href=""
@@ -118,8 +118,8 @@
         </div>
         <div class="footer-company">
             <p class="footer-title">Copyright © 2010 - 2022
-                Travale.com</p>
-            <p>Email: fTravale@gmail.com</p>
+            Poly Trọ</p>
+            <p>Email: polytro@gmail.com</p>
             <p class="address">Địa chỉ 1: Tòa nhà FPT
                 Polytechnic, đường Trịnh Văn Bô, Phương
                 Canh, Nam Từ Liêm, Hà Nội</p>

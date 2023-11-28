@@ -22,8 +22,7 @@
             <input type="text" class="form-control form-control_normal form-control_disabled" disabled value="<?= $user['phone'] ?>">
         </div>
         <div class="form-group2">
-            <label for="" class="form-label">Tên hiển
-                thị</label>
+            <label for="" class="form-label">Họ tên</label>
             <input type="text" name="fullname" class="form-control form-control_normal" value="<?= $user['fullname'] ?>">
         </div>
         <div class="form-group2">

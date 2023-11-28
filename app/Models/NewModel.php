@@ -73,6 +73,10 @@ class NewModel extends BaseModel
     {
         return $this->delete(self::TABLE, $id);
     }
+    public function deleteNewAdmin($id)
+    {
+        return $this->delete(self::TABLE, $id);
+    }
     public function getNewPost()
     {
         $sql = "SELECT * from news where `status` != 0 ORDER BY created_at desc limit 0,5";

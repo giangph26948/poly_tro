@@ -34,12 +34,31 @@
                 <td><?= $order['order_created_at'] ?></td>
                 <td><?= $order['status'] == 0 ? "Đang duyệt" : "Đã duyệt" ?>
                 </td>
-                <td><a href="http://localhost/poly_tro/site/order/deleteOrder?id=<?= $order['order_item_id'] ?>"
-                        class="btn-remover">Xóa</a>
+                <td>
+                    <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order['order_item_id'] ?>')">Xóa</a>
                 </td>
+                <?php if ($order['status'] == 0) : ?>
+                </td>
+                <td>Chờ thanh toán</td>
+                <?php else : ?>
+                    <td>
+                <form  method="POST" action="http://localhost/poly_tro/app/atm/atm_momo.php">
+                    <button type="submit" class="btn btn-submit">Thanh Toán Momo</button>
+                </form>
+                </td>
+                <?php endif; ?>
             </tr>
             <?php endforeach ?>
         </tbody>
     </table>
 </div>
 <?php view("site.partials.accountManageFooter") ?>
+<script>
+    function confirmDelete(orderId) {
+        var result = confirm("Bạn có chắc chắn muốn xóa không?");
+        if (result) {
+            // Nếu người dùng xác nhận xóa, chuyển hướng đến trang xóa
+            window.location.href = "http://localhost/poly_tro/site/order/deleteOrder?id=" + orderId;
+        }
+    }
+</script>

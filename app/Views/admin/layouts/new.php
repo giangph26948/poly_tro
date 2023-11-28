@@ -151,6 +151,10 @@
                     <?= $new['status'] == 1 ? "Đã duyệt" : "Chưa duyệt" ?>
                 </span>
             </div>
+            <div class="product-cell status-cell">
+                <a href="http://localhost/poly_tro/admin/new/deleteNewAdmin?id=<?= $new['id'] ?>"
+                        class="btn-remover">Xóa</a>
+            </div>
         </a>
         <?php endforeach ?>
     </div>
