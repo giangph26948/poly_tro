@@ -12,7 +12,8 @@
             <label for="" class="form-label">Cơ sở</label>
             <?php foreach ($facilities as $facility) : ?>
                 <?php if ($facility['id'] == $user['facility_id']) : ?>
-                    <input type="text" class="form-control form-control_normal form-control_disabled" disabled value="<?= $facility['name'] ?>">
+                    <input type="text" class="form-control form-control_normal form-control_disabled" disabled 
+                    value="<?= $facility['name'] ?>">
                 <?php endif ?>
             <?php endforeach ?>
         </div>
@@ -44,7 +45,7 @@
             <div class="form-group2">
                 <label for="" class="form-label"></label>
                 <a href="http://localhost/poly_tro/site/account/permission" style="font-size: 1.6rem; color: var(--secondaryColor)">Đăng
-                    ký quyền đăng tin</a>
+                    ký quyền Chủ phòng trọ</a>
             </div>
         <?php endif ?>
         <div class="form-group2" style="align-items: start">
@@ -57,7 +58,7 @@
                 <input type="file" id="files" accept="image/jpeg, image/png, image/jpg" name="image" style="font-size: 1.6rem; margin-bottom: 20px">
             </div>
         </div>
-        <button class="btn btn-submit">Lưu và cập
+        <button class="btn btn-submit" type="submit">Lưu và cập
             nhật</button>
     </form>
 </div>

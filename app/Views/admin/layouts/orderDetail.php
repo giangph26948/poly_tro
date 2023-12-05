@@ -159,6 +159,9 @@
                 <a href="http://localhost/poly_tro/admin/order/accept?id=<?= $order_item['order_item_id'] ?>"
                     class="admin-action_btn">Duyệt</a>
                 <?php endif ?>
+                <td>
+                    <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order_item['order_item_id'] ?>')">Xóa</a>
+                </td>
             </div>
         </div>
         <?php endforeach ?>
@@ -186,5 +189,12 @@ resetBtn.onclick = (e) => {
     filterForm.reset();
     e.preventDefault();
 }
+function confirmDelete(orderId) {
+        var result = confirm("Bạn có chắc chắn muốn xóa không?");
+        if (result) {
+            // Nếu người dùng xác nhận xóa, chuyển hướng đến trang xóa
+            window.location.href = "http://localhost/poly_tro/admin/order/deleteOrder?id=" + orderId;
+        }
+    }
 </script>
 <?php view("admin.partials.footer") ?>

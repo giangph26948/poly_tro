@@ -159,7 +159,7 @@ class AccountController extends BaseController
             "updated_at" => date("Y-m-d H:i:s"),
         ];
         $this->authModel->updateUser($data, $_SESSION["auth"]['id']);
-        header('location: http://localhost/poly_tro/site/account');
+        header('location: http://localhost/poly_tro/site/account/profile');
     }
 
     public function changePassword()

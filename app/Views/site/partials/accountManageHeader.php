@@ -18,26 +18,18 @@
 <body>
     <div class="container">
         <nav class="account-navbar">
-            <a href="http://localhost/poly_tro" class="account-navbar_item--link account-navbar--link">Travele.com</a>
+            <a href="http://localhost/poly_tro" class="account-navbar_item--link account-navbar--link">Polytro.com</a>
             <ul class="account-navbar_list">
                 <li class="account-navbar_item">
                     <a href="http://localhost/poly_tro" class="account-navbar_item--link">Trang
                         chủ</a>
                 </li>
                 <li class="account-navbar_item">
-                    <a href="" class="account-navbar_item--link">Phòng khách sạn</a>
+                    <a href="http://localhost/poly_tro/site/category?id=1" class="account-navbar_item--link">Phòng trọ</a>
                 </li>
                 <li class="account-navbar_item">
-                    <a href="" class="account-navbar_item--link">Nhà
-                        cho thuê</a>
+                    <a href="http://localhost/poly_tro/site/category?id=2" class="account-navbar_item--link">Nhà trọ</a>
                 </li>
-                <li class="account-navbar_item">
-                    <a href="" class="account-navbar_item--link">Căn
-                        hộ</a>
-                </li>
-                <li class="account-navbar_item">
-                    <a href="" class="account-navbar_item--link">Mặt
-                        bằng</a>
                 </li>
             </ul>
         </nav>

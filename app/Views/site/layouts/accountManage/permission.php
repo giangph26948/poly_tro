@@ -1,6 +1,6 @@
 <?php view("site.partials.accountManageHeader") ?>
 <div class="post-new_content">
-    <h1 class="post-new__title">Đăng ký quyền đăng tin
+    <h1 class="post-new__title">Đăng ký quyền Chủ phòng trọ
     </h1>
     <form
         action="http://localhost/poly_tro/site/account/savePermission"
@@ -49,7 +49,7 @@
                 class="form-control form-control_normal"
                 name="address" required>
         </div>
-        <button class="btn btn-submit">Lưu</button>
+        <button class="btn btn-submit">Đăng ký</button>
     </form>
 </div>
 <script

@@ -35,10 +35,10 @@
                 <td><?= $order['status'] == 0 ? "Đang duyệt" : "Đã duyệt" ?>
                 </td>
                 <td>
-                    <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order['order_item_id'] ?>')">Xóa</a>
+                    <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order['order_item_id'] ?>')">Xóa</a>
                 </td>
+
                 <?php if ($order['status'] == 0) : ?>
-                </td>
                 <td>Chờ thanh toán</td>
                 <?php else : ?>
                     <td>

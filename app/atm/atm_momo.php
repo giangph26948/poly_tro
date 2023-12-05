@@ -32,8 +32,8 @@ $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
 $orderInfo = "Thanh toán qua MoMo ATM";
 $amount = "10000";
 $orderId = time() ."";
-$redirectUrl = "http://localhost/poly_tro/site/account/order";
-$ipnUrl = "http://localhost/poly_tro/site/account/order";
+$redirectUrl = "http://localhost/poly_tro/site/thanks";
+$ipnUrl = "http://localhost/poly_tro/site/thanks";
 $extraData = "";
 
 

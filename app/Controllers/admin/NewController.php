@@ -55,7 +55,7 @@ class NewController extends BaseController
     {
         if (isset($_GET["id"])) {
             $id = $_GET["id"];
-            $this->newModel->deleteNew($id);
+            $this->newModel->deleteNewAdmin($id);
             header('location: http://localhost/poly_tro/admin/new');
         }
     }

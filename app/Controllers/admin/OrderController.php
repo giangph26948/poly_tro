@@ -43,6 +43,13 @@ class OrderController extends BaseController
         header("location: http://localhost/poly_tro/admin/order");
     }
 
+    public function deleteOrder()
+    {
+        $id = $_GET["id"];
+        $this->orderModel->deleteOrder($id);
+        header('location: http://localhost/poly_tro/admin/order');
+    }
+
     public function filter()
     {
         $id = $_GET["id"];

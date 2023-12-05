@@ -112,7 +112,7 @@
             <div class="product-cell status-cell"
                 style="max-width: 150px">Trạng thái</div>
             <div class="product-cell status-cell"
-                style="max-width: 120px">Hành động</div>
+                style="max-width: 120px"></div>
         </div>
         <?php foreach ($permissions as $permission) : ?>
         <div class=" products-row">
@@ -142,15 +142,12 @@
             <div class="product-cell status-cell">
                 <span
                     class="status <?= $permission['status'] == 1 ? "active" : "disabled" ?>">
-                    <?= $permission['status'] == 1 ? "Đã duyệt" : "Chưa duyệt" ?>
+                    <?= $permission['status'] == 1 ? "Đã đăng ký" : "Chưa đăng ký" ?>
                 </span>
             </div>
             <div class="product-cell"
                 style="max-width: 120px">
-                <?php if ($permission['status'] == 0) : ?>
-                <a href="http://localhost/poly_tro/admin/permission/acceptPermission?id=<?= $permission['id'] ?>"
-                    class="admin-action_btn">Duyệt</a>
-                <?php endif ?>
+                
             </div>
         </div>
         <?php endforeach ?>

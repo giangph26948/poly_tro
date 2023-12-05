@@ -98,9 +98,7 @@
                     </tbody>
                 </table>
             </div>
-            <div class="phanhoi">
-                <h2>🚩Gửi phản hồi</h2>
-            </div>
+            
         </div>
         <?php if (count($facilities)) : ?>
         <div class="splienquan">
