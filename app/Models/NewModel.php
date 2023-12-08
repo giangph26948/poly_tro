@@ -98,4 +98,10 @@ class NewModel extends BaseModel
         $sql = "SELECT n.*,u.fullname,u.image as avatar from news n inner join users u on n.user_id = u.id inner join facilities f on n.facility_id = f.id where n.`status` != 0 and f.id = ${id}";
         return $data = $this->query_all($sql);
     }
+    public function updateIsrent($id)
+    {
+        $sql = " update news  set is_rent = 1 
+        where id = $id ";
+        return $this->execute($sql);
+    }
 }

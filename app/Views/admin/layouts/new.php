@@ -120,7 +120,10 @@
             <div class="product-cell sales">Thời gian cập
                 nhật</div>
             <div class="product-cell status-cell"
-                style="max-width: 150px">Trạng thái</div>
+                style="max-width: 300px">Trạng thái</div>
+                <div class="product-cell status-cell"
+                style="max-width: 150px"></div>
+
         </div>
         <?php foreach ($news as $new) : ?>
         <a href="http://localhost/poly_tro/admin/new/detail?id=<?= $new['id'] ?>"
@@ -151,9 +154,10 @@
                     <?= $new['status'] == 1 ? "Đã duyệt" : "Chưa duyệt" ?>
                 </span>
             </div>
-            <div class="product-cell status-cell">
-                <a href="http://localhost/poly_tro/admin/new/deleteNewAdmin?id=<?= $new['id'] ?>"
-                        class="btn-remover">Xóa</a>
+            <div class="product-cell delete">
+            <form  method="POST" action="http://localhost/poly_tro/admin/new/deleteNewAdmin?id=<?= $new['id'] ?>">
+                    <button type="submit" class="btn btn-submit">Xóa</button>
+            </form>
             </div>
         </a>
         <?php endforeach ?>

@@ -40,4 +40,9 @@ class OrderModel extends BaseModel
     {
         return $this->delete(self::TABLE2, $id);
     }
+    public function updateStatus($id)
+    {
+        $sql = "update orders_item set status = 2 where id = $id";
+        return $this->execute($sql);
+    }
 }

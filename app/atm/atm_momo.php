@@ -18,6 +18,7 @@ function execPostRequest($url, $data)
     $result = curl_exec($ch);
     //close connection
     curl_close($ch);
+
     return $result;
 }
 
@@ -28,12 +29,13 @@ $endpoint = "https://test-payment.momo.vn/v2/gateway/api/create";
 $partnerCode = 'MOMOBKUN20180529';
 $accessKey = 'klm05TvNBzhg7h7j';
 $secretKey = 'at67qH6mk8w5Y1nAyMoYKMWACiEi2bsa';
-
+$id = $_GET["data"];
+$ordersId = $_GET["ordersId"];
 $orderInfo = "Thanh toán qua MoMo ATM";
 $amount = "10000";
 $orderId = time() ."";
-$redirectUrl = "http://localhost/poly_tro/site/thanks";
-$ipnUrl = "http://localhost/poly_tro/site/thanks";
+$redirectUrl = "http://localhost/poly_tro/site/thanks?data=$id&ordersId=$ordersId";
+$ipnUrl = "http://localhost/poly_tro/site/thanks?data=$id&ordersId=$ordersId";
 $extraData = "";
 
 
@@ -62,5 +64,5 @@ $extraData = "";
     //Just a example, please check more in there
 
     header('Location: ' . $jsonResult['payUrl']);
-
+    
 ?>

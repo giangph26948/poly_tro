@@ -123,6 +123,8 @@
             <div class="product-cell status-cell"
                 style="max-width: 150px">Trạng thái</div>
             <div class="product-cell status-cell"
+                style="max-width: 120px">Thao tác</div>    
+            <div class="product-cell status-cell"
                 style="max-width: 120px">Hành động</div>
         </div>
         <?php foreach ($orders_item as $order_item) : ?>
@@ -150,7 +152,7 @@
             <div class="product-cell status-cell">
                 <span
                     class="status <?= $order_item['status'] == 1 ? "active" : "disabled" ?>">
-                    <?= $order_item['status'] == 1 ? "Đã duyệt" : "Chưa duyệt" ?>
+                    <?= $order_item['status'] == 0 ? "Chưa duyệt" : ($order_item['status'] == 1 ? "Đã duyệt" : "Đã thanh toán" )?>
                 </span>
             </div>
             <div class="product-cell"
@@ -159,8 +161,11 @@
                 <a href="http://localhost/poly_tro/admin/order/accept?id=<?= $order_item['order_item_id'] ?>"
                     class="admin-action_btn">Duyệt</a>
                 <?php endif ?>
-                <td>
-                    <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order_item['order_item_id'] ?>')">Xóa</a>
+            </div>
+            <div class="product-cell"
+                style="max-width: 120px">
+            <td>
+                    <span class="btn-remover" onclick="confirmDelete('<?= $order_item['order_item_id'] ?>')">Xóa</span>
                 </td>
             </div>
         </div>

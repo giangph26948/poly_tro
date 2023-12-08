@@ -32,7 +32,7 @@
                 <td><?= price_format($order['price']) ?>
                 </td>
                 <td><?= $order['order_created_at'] ?></td>
-                <td><?= $order['status'] == 0 ? "Đang duyệt" : "Đã duyệt" ?>
+                <td><?= $order['status'] == 0 ? "Chưa duyệt" : ($order['status'] == 1 ? "Đã duyệt" : "Đã thanh toán" )?>
                 </td>
                 <td>
                     <a href="#" class="btn-remover" onclick="confirmDelete('<?= $order['order_item_id'] ?>')">Xóa</a>
@@ -40,12 +40,13 @@
 
                 <?php if ($order['status'] == 0) : ?>
                 <td>Chờ thanh toán</td>
-                <?php else : ?>
+                <?php elseif($order['status'] == 1) : ?>
                     <td>
-                <form  method="POST" action="http://localhost/poly_tro/app/atm/atm_momo.php">
+                <form  method="POST" action="http://localhost/poly_tro/app/atm/atm_momo.php?data=<?=$order['new_id'] ?>&ordersId=<?= $order['order_item_id'] ?>">
                     <button type="submit" class="btn btn-submit">Thanh Toán Momo</button>
                 </form>
                 </td>
+                <?php else :?> <td></td>
                 <?php endif; ?>
             </tr>
             <?php endforeach ?>

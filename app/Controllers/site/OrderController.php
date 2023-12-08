@@ -3,15 +3,19 @@ class OrderController extends BaseController
 {
 
     private $orderModel;
+    private $newModel;
 
     public function __construct()
     {
         $this->model('OrderModel');
         $this->orderModel = new OrderModel;
+        $this->model('NewModel');
+        $this->newModel = new NewModel;
     }
 
     public function index()
     {
+
         $new_id = $_GET["id"];
         $user_id = $_SESSION["auth"]['id'];
         $orders = $this->orderModel->getAll();

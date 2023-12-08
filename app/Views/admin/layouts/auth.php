@@ -112,9 +112,11 @@
             <div class="product-cell"
                 style="min-width: 280px">Email</div>
             <div class="product-cell status-cell"
-                style="max-width: 150px">Vai trò</div>
+                style="max-width: 120px">Vai trò</div>
             <div class="product-cell status-cell"
-                style="max-width: 250px">Hành động</div>
+                style="max-width: 230px">Hành động</div>
+                <dv class="product-cell status-cell"
+                style="max-width: 250px"></dv>
         </div>
         <?php foreach ($users as $user) : ?>
         <div class=" products-row">
@@ -150,6 +152,7 @@
                 <?php if ($user['role'] == 0) : ?>
                 <a href="http://localhost/poly_tro/admin/permission/acceptPermission?user_id=<?= $user['id'] ?>"
                     class="admin-action_btn">Cấp quyền</a>
+                <a href="http://localhost/poly_tro/admin/auth/deleteUser?id=<?= $user['id'] ?>" class="admin-action_btn">Xóa user</a>    
                 <?php else :  ?>
                 <a href="http://localhost/poly_tro/admin/permission/denialPermission?id=<?= $user['id'] ?>"
                     class="admin-action_btn">Xóa quyền</a>

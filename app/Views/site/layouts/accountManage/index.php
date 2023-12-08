@@ -38,7 +38,7 @@
                     echo $newdate;
                     ?>
                 </td> -->
-                <td><?= $new['status'] == 0 ? "Đang duyệt" : "Đã duyệt" ?>
+                <td><?= $new['status'] == 0 ? "Chưa duyệt" : ($new['status'] == 1 ? "Đã duyệt" : "Đã thanh toán" ) ?>
                 </td>
                 <td><a href="http://localhost/poly_tro/site/account/deleteNew?id=<?= $new['id'] ?>"
                         class="btn-remover">Xóa</a>

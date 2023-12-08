@@ -165,10 +165,18 @@
                 <i class="fa-regular fa-heart"></i>
                 <span>Yêu thích</span>
             </a>
-            <a href="http://localhost/poly_tro/site/order?id=<?= $new['id'] ?>"
+            
+            <?php if ($new['is_rent'] == 0 || $new['is_rent'] == null) : ?>
+                <a href="http://localhost/poly_tro/site/order?id=<?= $new['id'] ?>"
                 class="yeuthich">
                 <span>Đăng ký thuê</span>
             </a>
+                <?php else : ?>
+                    <a href="#"
+                class="yeuthich">
+                <span>Đã có người thuê</span>
+            </a>
+                <?php endif; ?>
         </div>
         <div class="clear boxtrai-item">
             <h2 class="boxtitle">
